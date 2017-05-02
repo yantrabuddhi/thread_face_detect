@@ -46,6 +46,10 @@ void run_capture()
   capture.open( -1 );
   if( capture.isOpened() )
   {
+      capture.set(CV_CAP_PROP_FOURCC ,CV_FOURCC('J', 'P', 'E', 'G') );//MJPG
+      capture.set(CV_CAP_PROP_FRAME_WIDTH,640);//640
+      capture.set(CV_CAP_PROP_FRAME_HEIGHT,480);//480
+
     for(;;)
     {
       mtx.lock();
