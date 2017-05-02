@@ -43,10 +43,10 @@ void run_capture()
   if( !eyes_cascade.load( eyes_cascade_name ) ){ printf("--(!)Error loading\n"); return; };
 
   //-- 2. Read the video stream
-  capture.open( -1 );
+  capture.open( -1 );//-1
   if( capture.isOpened() )
   {
-      capture.set(CV_CAP_PROP_FOURCC ,CV_FOURCC('J', 'P', 'E', 'G') );//MJPG
+      //capture.set(CV_CAP_PROP_FOURCC ,CV_FOURCC('M', 'J', 'P', 'G') );//MJPG
       capture.set(CV_CAP_PROP_FRAME_WIDTH,640);//640
       capture.set(CV_CAP_PROP_FRAME_HEIGHT,480);//480
 
